@@ -1,0 +1,20 @@
+/*index.php*/
+
+/*Body*/
+body {
+    margin: 0px;
+    background-color:springgreen;
+}
+
+/*Container*/
+#container {
+    margin: 0px;
+}
+
+/*Gallery*/
+.galleryImg {
+    width: 400px;
+    height: 210px;
+    float: left;
+    margin: 10px;
+}
