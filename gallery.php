@@ -5,6 +5,11 @@
     <title>Gallery</title>
 </head>
 <body>
+
+<div id="logoutButtonLocation">
+    <a href="./logout.php" id="logoutButton">Log Out</a>
+</div>
+
 <div id="container">
 
     <div class="gallery">
@@ -49,11 +54,7 @@
             <img class="galleryImg" src="./img/yasuo1.jpg">
         </div>
     </div>
-
 </div>
+
 </body>
 </html>
-
-<?php
-
-?>

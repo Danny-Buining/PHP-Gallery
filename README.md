@@ -14,4 +14,10 @@ main.css toegevoegd
 Max 3 fotos per regel
 
 4
-Nog mee bezig --> inlog systeem toegevoegd, je kan nu inloggen om de gallery te zien(nog geen account aanmaken).
+inlog systeem toegevoegd, je kan nu inloggen om de gallery te zien(nog geen account aanmaken of uitloggen).
+
+5
+uitlog systeem toegevoegd. Je kan het wachtwoord niet meer zien als je inlogd. 
+
+6
+Nog mee bezig --> Betere opmaak van het inlog form. Je kan registeren.

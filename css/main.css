@@ -1,20 +1,29 @@
-/*index.php*/
-
-/*Body*/
 body {
     margin: 0px;
     background-color:springgreen;
 }
 
-/*Container*/
 #container {
     margin: 0px;
 }
 
-/*Gallery*/
 .galleryImg {
     width: 400px;
     height: 210px;
     float: left;
     margin: 10px;
+}
+
+#logoutButtonLocation {
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 75px;
+    height: 20px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#logoutButton {
+    color:white;
 }

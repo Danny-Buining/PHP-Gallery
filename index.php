@@ -1,5 +1,4 @@
-<?php //require_once 'connection.php'; //Zet de code hier neer van connection.php 
-
+<?php
 session_start();
 
 include 'connection.php';
@@ -7,22 +6,22 @@ include 'connection.php';
 if(isset($_POST['username']) && $_POST['username'] !== "") {
     $username = strip_tags($_POST['username']);
     $password = strip_tags($_POST['password']);
-
-    $username = $db::real_escape_string($username);
-    $password = $db::real_escape_string($password);
+    //$username = $db::real_escape_string($username);
+    //$password = $db::real_escape_string($password);
 
     $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
 
-    $result = $conn->query($sql);
+    $result = $db->query($sql);
 
-    if($result->num_rows === 1) {
+    if ($result->rowCount() === 1) {
         echo"Je bent ingelogd!";
+        header("Location: gallery.php");
+		        exit();
     }
     else {
         echo "Er ging iets fout. <br>Zijn je inloggegevens correct?";
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,20 +34,12 @@ if(isset($_POST['username']) && $_POST['username'] !== "") {
 </head>
 <body>
 <form method="post">
-    <table class="login-Table">
-        <tr>
-            <td>Gebruikersnaam:</td>
-            <td><input type="text" name="username" size="20" maxlength="20"></td>
-        </tr>
-        <tr>
-            <td>Wachtwoorden:</td>
-            <td><input type="text" name="password" size="20" maxlength="20"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" name="loginButton" value="Inloggen"></td>
-        </tr>
-    </table>
+    <!--<td>Gebruikersnaam:</td>-->
+    <input type="text" name="username" size="20" maxlength="20"><br>
+    <!--<td>Wachtwoord:</td>-->
+    <input type="password" name="password" size="20" maxlength="20"><br>
+    <!--<td></td>-->
+    <input type="submit" name="loginButton" value="Inloggen">
 </form>
 </body>
 </html>
