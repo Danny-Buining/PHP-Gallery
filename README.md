@@ -23,7 +23,14 @@ uitlog systeem toegevoegd. Je kan het wachtwoord niet meer zien als je inlogd.
 
 
 6
-Opmaak van het inlog form veranderd. Login.php tegevoegd inplaats van de php in index.php. Register form toegevoegd, werkt nog niet. 
+Opmaak van het inlog form veranderd. Login.php tegevoegd inplaats van de php in index.php. Register form toegevoegd, werkt nog niet(NU WEL!). 
 
 
-7 Nog mee bezig --> Wachtwoorden encrypten. Je kan registeren.
+7
+Je kan registreren.(zitten nog wat fouten in.)
+
+
+8
+Nog mee bezig -->
+Fouten registreer systeem oplossen -> Als je alle of meerdere hokjes leeg laat.
+Wachtwoorden encrypten.

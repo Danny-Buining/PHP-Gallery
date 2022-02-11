@@ -1,5 +1,7 @@
 <?php 
+    include 'connection.php';
     include 'login.php';
+    include 'register.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +34,7 @@
 </form>
 
 
-<form class="formReg"> <!-- dit werkt nog niet -->
+<form method="POST" class="formReg"> <!-- dit werkt nog niet -->
     
 <p>Register</p>
 
@@ -44,6 +46,10 @@
     <tr>
         <td>Password:</td>
         <td><input type="password" name="regPassword" size="20" maxlength="20" class="regInput"></td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><input type="text" name="regEmail" size="200" maxlength="200" class="regInput"></td>
     </tr>
     <tr>
         <td></td>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include 'connection.php';
+//include 'connection.php';
 
 if(isset($_POST['username']) && $_POST['username'] !== "") {
     $username = strip_tags($_POST['username']);
