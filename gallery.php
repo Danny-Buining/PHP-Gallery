@@ -6,55 +6,18 @@
 </head>
 <body>
 
-<div id="logoutButtonLocation">
+<div id="logoutButtonOpmaak">
     <a href="./logout.php" id="logoutButton">Log Out</a>
 </div>
 
-<div id="container">
+<?php
+$images = ["1", "2", "3", "4", "5", "6", "7", "8"];
 
-    <div class="gallery">
-        <div class="galleryBox">
-            <img class="galleryImg" src="./img/ak-cnrp1.jpg">
-        </div>
-    </div>
-    <div class="gallery">
-        <div class="galleryBox">
-            <img class="galleryImg" src="./img/ak-cnrp2.jpg">
-        </div>
-    </div>
-    <div class="gallery">
-        <div class="galleryBox">
-            <img class="galleryImg" src="./img/code1.jpg">
-        </div>
-    </div>
-    
-    <div class="gallery">
-        <div class="galleryBox">
-            <img class="galleryImg" src="./img/gtav1.jpg">
-        </div>
-    </div>
-    <div class="gallery">
-        <div class="galleryBox">
-            <img class="galleryImg" src="./img/hyperbeast_awp.jpg">
-        </div>
-    </div>
-    <div class="gallery">
-        <div class="galleryBox">
-            <img class="galleryImg" src="./img/vintage-cnrp1.jpg">
-        </div>
-    </div>
-
-    <div class="gallery">
-        <div class="galleryBox">
-            <img class="galleryImg" src="./img/vintage-cnrp2.jpg">
-        </div>
-    </div>
-    <div class="gallery">
-        <div class="galleryBox">
-            <img class="galleryImg" src="./img/yasuo1.jpg">
-        </div>
-    </div>
-</div>
-
+foreach ($images as $image) {
+    echo "  <div id='containerGallery'>
+                <img class='galleryImg' src='./img/$image.jpg'>
+            </div>";    
+}
+?>
 </body>
 </html>

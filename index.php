@@ -1,27 +1,5 @@
-<?php
-session_start();
-
-include 'connection.php';
-
-if(isset($_POST['username']) && $_POST['username'] !== "") {
-    $username = strip_tags($_POST['username']);
-    $password = strip_tags($_POST['password']);
-    //$username = $db::real_escape_string($username);
-    //$password = $db::real_escape_string($password);
-
-    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-
-    $result = $db->query($sql);
-
-    if ($result->rowCount() === 1) {
-        echo"Je bent ingelogd!";
-        header("Location: gallery.php");
-		        exit();
-    }
-    else {
-        echo "Er ging iets fout. <br>Zijn je inloggegevens correct?";
-    }
-}
+<?php 
+    include 'login.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,13 +11,45 @@ if(isset($_POST['username']) && $_POST['username'] !== "") {
     <title>Login</title>
 </head>
 <body>
-<form method="post">
-    <!--<td>Gebruikersnaam:</td>-->
-    <input type="text" name="username" size="20" maxlength="20"><br>
-    <!--<td>Wachtwoord:</td>-->
-    <input type="password" name="password" size="20" maxlength="20"><br>
-    <!--<td></td>-->
-    <input type="submit" name="loginButton" value="Inloggen">
+<form method="post" class="FormLogin">
+
+<p>Inloggen</p>
+
+<table>
+    <tr> 
+        <td>Username: </td>
+        <td><input type="text" name="username" size="20" maxlength="20" class="formInputLogin"> </td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td><input type="password" name="password" size="20" maxlength="20" class="formInputLogin"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" name="loginButton" value="Inloggen" class="formButtonLogin"></td>
+    </tr>
+</table>
+</form>
+
+
+<form class="formReg"> <!-- dit werkt nog niet -->
+    
+<p>Register</p>
+
+<table>
+    <tr>
+        <td>Username:</td>
+        <td><input type="text" name="regUsername" size="20" maxlength="20" class="regInput"> </td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td><input type="password" name="regPassword" size="20" maxlength="20" class="regInput"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" name="regBtn" value="Register" class="regBtn"></td>
+    </tr>
+</table>
 </form>
 </body>
-</html>
+</html

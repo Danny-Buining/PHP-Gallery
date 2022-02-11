@@ -1,12 +1,18 @@
+:root {
+    --mainFontLogginButton: Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
+    --mainFont: Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
+}
+
+
 body {
     margin: 0px;
     background-color:springgreen;
 }
 
-#container {
+
+#containerGallery {
     margin: 0px;
 }
-
 .galleryImg {
     width: 400px;
     height: 210px;
@@ -14,7 +20,8 @@ body {
     margin: 10px;
 }
 
-#logoutButtonLocation {
+
+#logoutButtonOpmaak {
     margin-left: 10px;
     margin-top: 5px;
     width: 75px;
@@ -23,7 +30,61 @@ body {
     border-radius: 10px;
     text-align: center;
 }
-
 #logoutButton {
     color:white;
+}
+
+
+.FormLogin {
+    font-family:var(--mainFontLogginButton);
+    margin-left: 20px;
+    margin-top: 5px;
+    width: fit-content;
+    height: fit-content;
+    background-color: Grey;
+ 
+}
+.formInputLogin{
+    font-family:var(--mainFontLogginButton);
+    width: 200px;
+    border-radius: 5px;
+}
+.formButtonLogin {
+    font-family: var(--mainFontLogginButton);
+    text-align: center;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.FormLogin p {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.formReg {
+    font-family:var(--mainFontLogginButton);
+    margin-left: 20px;
+    margin-top: 5px;
+    width: fit-content;
+    height: fit-content;
+    background-color: Grey;
+}
+.regInput{
+    font-family:var(--mainFontLogginButton);
+    width: 200px;
+    border-radius: 5px;
+}
+.regBtn {
+    font-family: var(--mainFontLogginButton);
+    text-align: center;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.formReg p {
+    font-weight: bold;
+    text-align: center;
 }
