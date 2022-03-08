@@ -31,6 +31,10 @@ Je kan registreren.(zitten nog wat fouten in.)
 
 
 8
+Image upload.
+inloggen met sessions
+
+
+9
 Nog mee bezig -->
 Fouten registreer systeem oplossen -> Als je alle of meerdere hokjes leeg laat.
-Wachtwoorden encrypten.
