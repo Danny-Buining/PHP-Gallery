@@ -1,5 +1,5 @@
 <?php
-  include './includes/gd_imagestyle.php';
+  // include './includes/gd_imagestyle.php';
   session_start();
   include 'check.php';
 ?>

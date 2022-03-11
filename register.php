@@ -7,30 +7,27 @@
         //$sql = "INSERT INTO users (username, password, email) VALUES(?, ?)";
         $sql = "INSERT INTO `users` (`username`, `password`, `email`) VALUES (?, ?, ?);";        
         $infoInsert = $db->prepare($sql);
-        $result = $infoInsert->execute([$regUsername, $regPassword, $regEmail]);
-        $regCheck ;
-        
-        //dit werkt nog niet zoals het moet
+        $regCheck = true;
+
+        //dit werkt nog niet zoals het moet    die("Test");
         if(empty($regUsername)) {
-            echo "Vul een gebruikersnaam in!";
+            echo "Vul alle velden in!";
             $regCheck = false;
         } 
-
-        if(empty($regPassword)) {
-            echo "Vul een wachtwoord in!" ;
+        elseif(empty($regPassword)) {
+            echo "Vul alle velden in!" ;
             $regCheck = false;
         }
-        
-        if(empty($regEmail)) {
-            echo "Vul een email in" ;
+        elseif(empty($regEmail)) {
+            echo "Vul alle velden in!" ;
             $regCheck = false;
         }
-
-        if ($regCheck == false){
+        elseif ($regCheck == false){    
             echo "Er is iets fout gegaan";
         }
-        else {
-            $result;
+        elseif ($regCheck != false) {
+            $result = $infoInsert->execute([$regUsername, $regPassword, $regEmail]);
         }
+        
     } 
 ?>
